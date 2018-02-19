@@ -1,1 +1,1 @@
-# Semantic-Suffix-Tree-Clustering
+# Semantic Suffix Tree Clustering
