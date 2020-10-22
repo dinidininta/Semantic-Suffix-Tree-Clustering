@@ -1,4 +1,4 @@
-from semantic_suffix_tree.synonyms import dictionary
+from src.semantic_suffix_tree.synonyms import dictionary
 
 class SemanticSimilarity:
   def __init__(self, wa, wb):

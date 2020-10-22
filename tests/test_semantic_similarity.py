@@ -1,5 +1,5 @@
 import pytest
-from semantic_suffix_tree.semantic_similarity import SemanticSimilarity
+from src.semantic_suffix_tree.semantic_similarity import SemanticSimilarity
 
 def test_return_true_when_similar():
   wa = "eat"
