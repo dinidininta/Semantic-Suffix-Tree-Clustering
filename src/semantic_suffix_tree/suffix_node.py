@@ -3,6 +3,13 @@ class SuffixNode:
     self.name = name
     self.index = index
     self.parent = parent
+    self.children = []
 
   def print_node(self):
     return dict(name = self.name, index = self.index, parent = self.parent)
+
+  def add_children(self, child):
+    self.children.append(child)
+  
+  def has_children(self):
+    return len(self.children) > 0
