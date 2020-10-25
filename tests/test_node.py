@@ -3,7 +3,7 @@ from src.semantic_suffix_tree.node import Node
 
 def test_return_node():
   node = Node("root", 0)
-  expected_result = { "name": "root", "index": 0, "parent": None, "children": [] }
+  expected_result = { "name": "root", "children": [] }
   assert node.print_node() == expected_result, "Should return node properties"
 
 def test_has_children():
@@ -21,6 +21,7 @@ def test_has_parent():
   child = Node("child", 1, root)
 
   assert child.has_parent() == True, "Should return true when there is parent"
+
 def test_has_no_parent():
   root = Node("root", 0)
 
@@ -30,7 +31,7 @@ def test_return_node_with_printed_children():
   node = Node("root", 0)
   child = Node("child", 1, node)
   node.add_children(child)
-  expected_result = { "name": "root", "index": 0, "parent": None, "children": [
-    { "name": "child", "index": 1, "parent": node, "children": [] }
+  expected_result = { "name": "root", "children": [
+    { "name": "child", "children": [] }
   ]}
   assert node.print_node() == expected_result, "Should return node properties"

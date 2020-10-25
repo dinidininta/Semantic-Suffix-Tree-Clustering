@@ -27,12 +27,10 @@ def test_print_tree():
   child = Node('child', 1, root)
   second_child = Node('second_child', 2, root)
   expected_result = { 
-    "name": "root", 
-    "index": 0, 
-    "parent": None, 
+    "name": "root",
     "children": [
-      { "name": "child", "index": 1, "parent": root, "children": [] },
-      { "name": "second_child", "index": 2, "parent": root, "children": [] }
+      { "name": "child", "children": [] },
+      { "name": "second_child", "children": [] }
     ]
   }
 
