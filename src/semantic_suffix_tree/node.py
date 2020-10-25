@@ -1,4 +1,4 @@
-class SuffixNode:
+class Node:
   def __init__(self, name, index, parent = None):
     self.name = name
     self.index = index
@@ -6,7 +6,7 @@ class SuffixNode:
     self.children = []
 
   def print_node(self):
-    return dict(name = self.name, index = self.index, parent = self.parent)
+    return dict(name = self.name, index = self.index, parent = self.parent, children = self.children)
 
   def add_children(self, child):
     self.children.append(child)
