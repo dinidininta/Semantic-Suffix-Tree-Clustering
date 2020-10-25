@@ -31,8 +31,8 @@ def test_print_tree():
     "index": 0, 
     "parent": None, 
     "children": [
-      child,
-      second_child
+      { "name": "child", "index": 1, "parent": root, "children": [] },
+      { "name": "second_child", "index": 2, "parent": root, "children": [] }
     ]
   }
 

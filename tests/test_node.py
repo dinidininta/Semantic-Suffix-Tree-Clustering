@@ -25,3 +25,12 @@ def test_has_no_parent():
   root = Node("root", 0)
 
   assert root.has_parent() == False, "Should return False when there is no parent"
+
+def test_return_node_with_printed_children():
+  node = Node("root", 0)
+  child = Node("child", 1, node)
+  node.add_children(child)
+  expected_result = { "name": "root", "index": 0, "parent": None, "children": [
+    { "name": "child", "index": 1, "parent": node, "children": [] }
+  ]}
+  assert node.print_node() == expected_result, "Should return node properties"

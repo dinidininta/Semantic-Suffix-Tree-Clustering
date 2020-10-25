@@ -6,7 +6,12 @@ class Node:
     self.children = []
 
   def print_node(self):
-    return dict(name = self.name, index = self.index, parent = self.parent, children = self.children)
+    printed_children = []
+    if(len(self.children) > 0):
+      for child in self.children:
+        printed_child = child.print_node()
+        printed_children.append(printed_child)
+    return dict(name = self.name, index = self.index, parent = self.parent, children = printed_children)
 
   def add_children(self, child):
     self.children.append(child)
