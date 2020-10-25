@@ -13,3 +13,6 @@ class Node:
   
   def has_children(self):
     return len(self.children) > 0
+  
+  def has_parent(self):
+    return self.parent is not None
